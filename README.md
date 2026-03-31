@@ -68,65 +68,14 @@ Type exit to close the program.
 
 The core formula used to classify a message is Bayes' Theorem:
 
-P
-(
-S
-p
-a
-m
-|
-W
-)
-=
-P
-(
-W
-|
-S
-p
-a
-m
-)
-⋅
-P
-(
-S
-p
-a
-m
-)
-P
-(
-W
-)
+
+P(Spam | W) = ( P(W | Spam) * P(Spam) ) / P(W)
+
 
 To prevent the "Zero Frequency Problem" (where a new word crashes the probability to 0), we use Laplace Smoothing:
 
-P
-(
-w
-|
-c
-)
-=
-count
-(
-w
-,
-c
-)
-+
-1
-count
-(
-c
-)
-+
-|
-V
-|
-+
-1
+P(w | c) = ( count(w, c) + 1 ) / ( total_words_in_c + |V| )
+
 
 📊 Sample Output
 
@@ -134,13 +83,15 @@ V
 
 Enter message: Urgent! Claim your lottery reward now Result: SPAM (Score: -14.52)
 Enter message: Hey, are we still meeting for lunch? Result: NOT SPAM (Score: -12.30)
+
 👤 Author Details
 
 Submitted By:
-Name - Kanishk Khandelwal 
 
-reg no. - 25BCE10855
+Name: Kanishk Khandelwal 
 
-branch - CSE Core (B.tech)
+Roll Number: 25BCE10855
 
-institution - VIT Bhopal University 
+Degree: B.Tech cse core 
+
+Institution: VIT BHOPAL UNIVERSITY
